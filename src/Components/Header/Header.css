@@ -1,0 +1,74 @@
+.top-header {
+    width: 100%;
+    background: #fff;
+    color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+    height: 84px;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    box-shadow: 0 2px 16px 0 rgba(15, 125, 214, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    letter-spacing: 1px;
+}
+
+.top-header-left .company-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0f7dd6cb;
+    text-shadow: none;
+}
+
+.top-header-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.header-icon {
+    color: #0f7dd6cb;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+    opacity: 0.88;
+}
+
+.header-icon:hover {
+    color: #11dfeecb;
+    transform: scale(1.12);
+    opacity: 1;
+}
+
+.header-contact-text {
+    font-size: 1rem;
+    margin-left: 4px;
+    color: #222;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+    .top-header {
+        flex-direction: row;
+        padding: 8px 8px;
+        gap: 4px;
+    }
+    .top-header-left .company-name {
+        font-size: 1.05rem;
+    }
+    .top-header-right {
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 0.98rem;
+    }
+    .header-contact-text {
+        display: none;
+    }
+}

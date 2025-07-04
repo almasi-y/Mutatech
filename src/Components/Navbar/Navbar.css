@@ -1,0 +1,106 @@
+nav{
+    background: linear-gradient(90deg, #09294e 0%, #1e4d7a 35%, #3a7bd5 70%, #a8e0ff 100%);
+    color: #fff;
+    padding: 4px 0;
+    width:100%;
+    position:fixed;
+    top: 84px; /* Height of the header */
+    left:0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    z-index: 10;
+    flex-wrap: wrap;
+    /*background: linear-gradient(90deg, #09294e 0%, #1e4d7a 35%, #3a7bd5 70%, #a8e0ff 100%);*/
+}
+
+.logo{
+  width: 180px;
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 5px 8px;
+  font-size: 16px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  z-index: 20;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 28px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+  display: block;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+    }
+    .logo {
+        margin-left: 16px;
+        width: 140px;
+        height: 40px;
+    }
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 16px;
+        top: 12px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background: linear-gradient(90deg, #09294e 0%, #1e4d7a 35%, #3a7bd5 70%, #a8e0ff 100%);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        z-index: 15;
+        transition: max-height 0.3s;
+    }
+    nav ul.open {
+        max-height: 400px;
+        padding-bottom: 12px;
+    }
+    nav ul li {
+        margin: 18px 24px;
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+/* Hide hamburger on large screens */
+@media screen and (min-width: 901px) {
+    .hamburger {
+        display: none;
+    }
+}
