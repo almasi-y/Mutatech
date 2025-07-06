@@ -9,11 +9,21 @@ const Home = () => {
     <div>
       {/* Hero section is full-width and doesn't need padding adjustment */}
       <Hero />
-      <div className="container">
-        <Aboutus />
-        <Services />
-        <Projects />
-      </div>
+      
+      {/* Main content sections with improved spacing and layout */}
+      <main className="home-content">
+        <section className="about-section">
+          <Aboutus />
+        </section>
+        
+        <section className="services-section">
+          <Services />
+        </section>
+        
+        <section className="projects-section">
+          <Projects />
+        </section>
+      </main>
     </div>
   )
 }

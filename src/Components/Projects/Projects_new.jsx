@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './Projects.css'
 import project_1 from '../../assets/project.jpg'
@@ -9,8 +9,6 @@ import project_5 from '../../assets/project5.jpg'
 import project_6 from '../../assets/project6.jpg'
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All')
-
   const projects = [
     {
       id: 1,
@@ -56,11 +54,6 @@ const Projects = () => {
     }
   ]
 
-  const categories = ['All', ...new Set(projects.map(project => project.category))]
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory)
-
   return (
     <div className="projects-container">
       <div className="projects-header">
@@ -70,21 +63,9 @@ const Projects = () => {
           Explore some of our recent work and see how we deliver innovative solutions for our clients across various sectors.
         </p>
       </div>
-
-      <div className="projects-filter">
-        {categories.map(category => (
-          <button
-            key={category}
-            className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
       
       <div className="projects-grid">
-        {filteredProjects.map(project => (
+        {projects.map(project => (
           <div key={project.id} className="project-card">
             <div className="project-image">
               <img src={project.image} alt={project.title} />
@@ -102,12 +83,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-
-      {filteredProjects.length === 0 && (
-        <div className="no-projects">
-          <p>No projects found in this category.</p>
-        </div>
-      )}
     </div>
   )
 }

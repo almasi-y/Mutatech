@@ -32,6 +32,26 @@ a{
   min-height: 100vh;
 }
 
+/* Home page specific styles */
+.home-content {
+  background: #f8f4f4;
+}
+
+.about-section {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.services-section {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.projects-section {
+  background: #fff;
+  padding: 80px 0 100px;
+}
+
 .btn{
   padding: 10px 10px;
   border-radius: 30px;

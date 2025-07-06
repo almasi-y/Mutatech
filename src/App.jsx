@@ -10,6 +10,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import ServicesPage from './pages/ServicesPage'
 import ProjectsPage from './pages/ProjectsPage'
+import ProjectDetailsPage from './pages/ProjectDetailsPage'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/project/:id" element={<ProjectDetailsPage />} />
         </Routes>
         <Footer />
       </div>
