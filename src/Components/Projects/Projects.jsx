@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import './Projects.css'
+import '../styles/Projects.css'
 import project_1 from '../../assets/project.jpg'
 import project_2 from '../../assets/project2.jpg'
 import project_3 from '../../assets/project3.jpg'

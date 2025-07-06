@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import './ProjectDetails.css'
+import '../styles/ProjectDetails.css'
 import project_1 from '../../assets/project.jpg'
 import project_2 from '../../assets/project2.jpg'
 import project_3 from '../../assets/project3.jpg'

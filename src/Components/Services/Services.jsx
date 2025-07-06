@@ -1,5 +1,5 @@
 import React from 'react'
-import './Services.css'
+import '../styles/Services.css' // Assuming you have a CSS file for styling
 
 const Services = () => {
   const services = [

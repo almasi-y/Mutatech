@@ -1,5 +1,5 @@
 import React from 'react'
-import './Hero.css'
+import '../styles/Hero.css'
 import Carousel from './app'
 import hero from '../../assets/hero.jpg'
 import hero2 from '../../assets/hero2.jpg'

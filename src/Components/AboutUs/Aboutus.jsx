@@ -1,5 +1,5 @@
 import React from 'react';
-import './Aboutus.css';
+import '../styles/Aboutus.css';
 
 const Aboutus = () => {
   return (
