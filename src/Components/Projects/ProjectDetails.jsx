@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import './ProjectDetails.css'
 import project_1 from '../../assets/project.jpg'
@@ -10,6 +10,11 @@ import project_6 from '../../assets/project6.jpg'
 
 const ProjectDetails = () => {
   const { id } = useParams()
+
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0)
+  }, [id])
   
   const projectsData = {
     1: {

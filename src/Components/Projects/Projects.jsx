@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Projects.css'
 import project_1 from '../../assets/project.jpg'
@@ -10,6 +10,15 @@ import project_6 from '../../assets/project6.jpg'
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All')
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Simulate loading state
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [])
 
   const projects = [
     {
@@ -17,42 +26,54 @@ const Projects = () => {
       title: "Residential Complex Power Distribution",
       description: "Complete electrical installation for a 17-floor residential complex with 72 units, including power distribution and lighting systems.",
       image: project_1,
-      category: "Residential"
+      category: "Residential",
+      duration: "18 months",
+      year: "2023"
     },
     {
       id: 2,
       title: "Commercial Building Electrical Design",
       description: "Advanced electrical design and installation for a 32-floor mixed-use commercial development project.",
       image: project_2,
-      category: "Commercial"
+      category: "Commercial",
+      duration: "24 months",
+      year: "2023"
     },
     {
       id: 3,
       title: "5-Star Hotel Power Management",
       description: "Comprehensive power management and distribution system for a luxury 5-star hotel facility.",
       image: project_3,
-      category: "Hospitality"
+      category: "Hospitality",
+      duration: "15 months",
+      year: "2022"
     },
     {
       id: 4,
       title: "Industrial Facility Electrical Systems",
       description: "Complete electrical systems design and installation for large-scale industrial blocks and manufacturing facilities.",
       image: project_4,
-      category: "Industrial"
+      category: "Industrial",
+      duration: "20 months",
+      year: "2022"
     },
     {
       id: 5,
       title: "Port Facility Power Infrastructure",
       description: "High-voltage power distribution and infrastructure for port facilities handling up to 33KV systems.",
       image: project_5,
-      category: "Infrastructure"
+      category: "Infrastructure",
+      duration: "30 months",
+      year: "2021"
     },
     {
       id: 6,
       title: "Smart Building Management System",
       description: "Implementation of advanced building management systems with integrated power monitoring and control.",
       image: project_6,
-      category: "Smart Systems"
+      category: "Smart Systems",
+      duration: "12 months",
+      year: "2023"
     }
   ]
 
@@ -60,6 +81,17 @@ const Projects = () => {
   const filteredProjects = selectedCategory === 'All' 
     ? projects 
     : projects.filter(project => project.category === selectedCategory)
+
+  if (isLoading) {
+    return (
+      <div className="projects-container">
+        <div className="projects-loading">
+          <div className="loading-spinner"></div>
+          <p>Loading amazing projects...</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="projects-container">
@@ -90,6 +122,10 @@ const Projects = () => {
               <img src={project.image} alt={project.title} />
               <div className="project-overlay">
                 <span className="project-category">{project.category}</span>
+              </div>
+              <div className="project-meta">
+                <span className="project-year">{project.year}</span>
+                <span className="project-duration">{project.duration}</span>
               </div>
             </div>
             <div className="project-content">
