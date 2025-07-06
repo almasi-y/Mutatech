@@ -1,0 +1,129 @@
+.aboutus {
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.aboutus-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.aboutus-header h1 {
+    font-size: 3rem;
+    color: #09294e;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.aboutus-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #09294e 0%, #3a7bd5 100%);
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+.aboutus-intro {
+    font-size: 1.3rem;
+    color: #555;
+    margin: 30px auto;
+    max-width: 800px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.aboutus-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 20px auto;
+    max-width: 900px;
+    line-height: 1.7;
+}
+
+.aboutus-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.aboutus-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(9, 41, 78, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.aboutus-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(9, 41, 78, 0.15);
+    border-color: #3a7bd5;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #09294e 0%, #3a7bd5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.card-icon i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.aboutus-card h3 {
+    font-size: 1.5rem;
+    color: #09294e;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.aboutus-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .aboutus {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+    
+    .aboutus-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .aboutus-intro {
+        font-size: 1.1rem;
+    }
+    
+    .aboutus-cards {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .aboutus-card {
+        padding: 30px 20px;
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .card-icon i {
+        font-size: 1.5rem;
+    }
+}
