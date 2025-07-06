@@ -25,6 +25,13 @@ a{
   padding-left:3%;
   padding-right: 5%;
 }
+
+.page-container {
+  padding-left: 3%;
+  padding-right: 5%;
+  min-height: 100vh;
+}
+
 .btn{
   padding: 10px 10px;
   border-radius: 30px;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 import logo from '../../assets/logo2.svg'
 
@@ -7,19 +8,20 @@ const Navbar = () => {
 
   return (
     <nav className='container'>
-      <img src={logo} alt="Mutach tech" className="logo" />
+      <Link to="/">
+        <img src={logo} alt="Mutach tech" className="logo" />
+      </Link>
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         <span />
         <span />
         <span />
       </div>
       <ul className={menuOpen ? 'open' : ''} onClick={() => setMenuOpen(false)}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Contact</li>
-        <li>Projects</li>
-        <li><button className='btn'>Contact Us</button></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/services">Services</Link></li>
+        <li><Link to="/projects">Projects</Link></li>
+        <li><Link to="/contact"><button className='btn'>Contact Us</button></Link></li>
       </ul>
     </nav>
   )

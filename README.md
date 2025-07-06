@@ -1,12 +1,60 @@
-# React + Vite
+# Mutatech Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the website for Mutatech Ltd, a company that provides electrical engineering solutions.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+src/
+|-- assets/           # Contains all images and svg files
+|-- Components/       # Reusable UI components
+|   |-- AboutUs/      # About Us section component
+|   |-- ContactUs/    # Contact Us form component
+|   |-- Footer/       # Footer component
+|   |-- Header/       # Header component
+|   |-- Hero/         # Hero/Carousel component
+|   |-- Navbar/       # Navigation bar component
+|   |-- Projects/     # Projects showcase component
+|   |-- Services/     # Services section component
+|
+|-- pages/            # Page components
+|   |-- Home.jsx      # Home page (landing page)
+|   |-- About.jsx     # About page
+|   |-- Contact.jsx   # Contact page
+|   |-- ProjectsPage.jsx # Projects page
+|   |-- ServicesPage.jsx # Services page
+|
+|-- App.jsx           # Main app component with routing
+|-- main.jsx          # Entry point
+|-- index.css         # Global styles
+```
 
-## Expanding the ESLint configuration
+## Navigation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The website has the following pages:
+- Home (/) - The landing page with all sections
+- About (/about) - Detailed about us information
+- Services (/services) - Services offered by Mutatech
+- Projects (/projects) - Showcase of Mutatech projects
+- Contact (/contact) - Contact form and company details
+
+## Development
+
+To run the development server:
+
+```bash
+npm run dev
+```
+
+To build for production:
+
+```bash
+npm run build
+```
+
+## Technical Details
+
+Built with:
+- React 19
+- React Router DOM
+- Vite 6
